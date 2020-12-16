@@ -19,8 +19,8 @@ class Genre
     @@all.clear
   end
 
-  def create(name)
-    instance = self.class.new(name)
+  def self.create(name)
+    instance = new(name)
     instance.save
     instance
   end
