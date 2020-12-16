@@ -22,5 +22,6 @@ class Artist
   def create(name)
     instance = self.new(name)
     instance.save
+    instance
   end
 end
