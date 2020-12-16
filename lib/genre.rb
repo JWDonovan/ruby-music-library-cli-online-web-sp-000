@@ -22,5 +22,6 @@ class Genre
   def create(name)
     instance = self.new(name)
     save
+    self
   end
 end
