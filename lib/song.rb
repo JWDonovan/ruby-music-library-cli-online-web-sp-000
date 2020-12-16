@@ -51,8 +51,8 @@ class Song
   def new_from_filename(filename)
     song_info = filename.split(" - ")
 
-    artist = Artist.find_or_create_by_name(song_info["artist"])
-    genre = Genre.find_or_create_by_name(song_info["genre"])
+    artist = Artist.find_or_create_by_name(song_info[0])
+    genre = Genre.find_or_create_by_name(song_info[2].gsub(".mp3", ""))
 
     new(song_info["name"], artist, genre)
   end
