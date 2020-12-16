@@ -45,18 +45,14 @@ class MusicLibraryController
   end
 
   def list_artists
-    Artist.all.sort do |a, b|
-      a.name <=> b.name
-    end.each_with_index(1) do |artist, index|
-      puts "#{index}. #{artist.name}"
+    Artist.all.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |a, i|
+      puts "#{i}. #{a.name}"
     end
   end
 
   def list_genres
-    Genre.all.sort do |a, b|
-      a.name <=> b.name
-    end.each_with_index(1) do |genre, index|
-      puts "#{index}. #{genre.name}"
+    Genre.all.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |g, i|
+      puts "#{i}. #{g.name}"
     end
   end
 
