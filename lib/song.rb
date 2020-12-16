@@ -18,4 +18,9 @@ class Song
   def destroy_all
     @@all.clear
   end
+
+  def create(name)
+    instance = self.new(name)
+    self.save
+  end
 end
