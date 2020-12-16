@@ -24,4 +24,8 @@ class Genre
     instance.save
     instance
   end
+
+  def add_song(song:)
+    :song.genre = self unless :song.genre
+  end
 end
