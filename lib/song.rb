@@ -20,7 +20,7 @@ class Song
   end
 
   def create(name)
-    instance = self.new(name)
+    instance = new(name)
     instance.save
     instance
   end
