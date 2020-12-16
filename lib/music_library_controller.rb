@@ -36,6 +36,9 @@ class MusicLibraryController
   end
 
   def list_songs
+    Song.all.sort do |a, b|
+      a.name <=> b.name
+    end
   end
 
   def list_artists
