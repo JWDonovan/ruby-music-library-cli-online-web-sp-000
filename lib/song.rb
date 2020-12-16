@@ -49,10 +49,11 @@ class Song
   end
 
   def new_from_filename(filename)
-
+    
   end
 
   def create_from_filename(filename)
-
+    song = new_from_filename(filename)
+    song.save
   end
 end
