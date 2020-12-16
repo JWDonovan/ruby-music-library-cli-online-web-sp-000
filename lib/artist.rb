@@ -25,4 +25,10 @@ class Artist
     instance.save
     instance
   end
+
+  def songs
+    Song.all.select do |song|
+      song.artist === self
+    end
+  end
 end
