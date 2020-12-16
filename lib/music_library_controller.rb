@@ -65,6 +65,10 @@ class MusicLibraryController
     input = gets.strip
 
     if artist = Artist.find_by_name(input)
+      artist.songs.sort do |a, b|
+        a.name <=> b.name
+      end
+    end
   end
 
   def list_songs_by_genre
