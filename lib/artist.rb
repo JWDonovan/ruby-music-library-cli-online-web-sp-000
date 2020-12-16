@@ -3,7 +3,7 @@ class Artist
 
   @@all = []
 
-  def initialize(name:)
+  def initialize(name)
     @name = name
     @songs = []
   end
@@ -32,7 +32,7 @@ class Artist
     end
   end
 
-  def add_song(song:)
-    :song.artist = self unless :song.artist
+  def add_song(song)
+    song.artist = self unless song.artist
   end
 end
