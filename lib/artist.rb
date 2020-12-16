@@ -33,6 +33,6 @@ class Artist
   end
 
   def genres
-    @songs.genre.uniq
+    @songs.collect.uniq
   end
 end
