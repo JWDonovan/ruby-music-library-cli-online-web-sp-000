@@ -27,4 +27,7 @@ class Song
     instance.save
     instance
   end
+
+  def artist=(artist:)
+  end
 end
