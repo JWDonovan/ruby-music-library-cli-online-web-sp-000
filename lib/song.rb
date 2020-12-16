@@ -21,6 +21,6 @@ class Song
 
   def create(name)
     instance = self.new(name)
-    self.save
+    save
   end
 end
