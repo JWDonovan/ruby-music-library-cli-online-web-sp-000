@@ -3,7 +3,7 @@ class Genre
 
   @@all = []
 
-  def initialize(name:)
+  def initialize(name)
     @name = name
   end
 
@@ -25,7 +25,7 @@ class Genre
     instance
   end
 
-  def add_song(song:)
-    :song.genre = self unless :song.genre
+  def add_song(song)
+    song.genre = self unless song.genre
   end
 end
