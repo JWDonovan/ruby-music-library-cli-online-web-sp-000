@@ -49,8 +49,10 @@ class Song
   end
 
   def new_from_filename(filename)
-    artist = Artist.find_or_create_by_name(artist_name)
-    genre = Genre.find_or_create_by_name(genre_name)
+    song_info = //.match(filename)
+    
+    artist = Artist.find_or_create_by_name(song_info["artist"])
+    genre = Genre.find_or_create_by_name(song_info["genre"])
 
     new(song_name, artist, genre)
   end
